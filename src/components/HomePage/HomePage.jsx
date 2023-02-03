@@ -15,12 +15,6 @@ const demoStats = {
 };
 
 const Homepage = () => {
-  // const { data, isFetching } = useGetCryptosQuery(12);
-  // const stats = data?.data?.stats;
-  // console.log(data);
-
-  // if (isFetching) return 'Loading...';
-
   return (
     <>
       <Stats stats={demoStats} />
