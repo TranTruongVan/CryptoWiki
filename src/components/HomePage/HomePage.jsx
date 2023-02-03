@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useGetCryptosQuery } from '../../services/cryptoApi';
 import Stats from '../Stats/Stats';
 import Cryptocurrencies from '../Cryptocurrencies/Cryptocurrencies';
 import News from '../News/News';
+import { CircularProgress } from '@mui/material';
+import { useGetCryptoGlobalQuery } from '../../services/cryptoGlobalAPi';
 
 const demoStats = {
   total: 23157,
@@ -15,6 +16,17 @@ const demoStats = {
 };
 
 const Homepage = () => {
+  // const { data, isFetching } = useGetCryptoGlobalQuery();
+  // const stats = data?.data?.stats;
+;
+
+  // if (isFetching)
+  //   return (
+  //     <div className="flex justify-center">
+  //       <CircularProgress size="120px" />
+  //     </div>
+  //   );
+
   return (
     <>
       <Stats stats={demoStats} />

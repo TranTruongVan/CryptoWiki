@@ -17,7 +17,6 @@ const cryptoDemo = {
 
 const CryptoCard = ({ crypto }) => {
   // return <div className="w-72 mx-auto">CryptoCard</div>;
-  console.log({crypto})
   return <div>CryptoCard</div>;
 };
 

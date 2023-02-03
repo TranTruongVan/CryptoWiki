@@ -11,8 +11,6 @@ const Cryptocurrencies = ({ simplified }) => {
   const { data, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState(data);
 
-  console.log(data);
-
   useEffect(() => {
     if (!simplified) {
       const filteredCryptos = data?.filter((coin) =>
@@ -37,7 +35,7 @@ const Cryptocurrencies = ({ simplified }) => {
       )}
       <div className="flex flex-wrap justify-between mt-6">
         {cryptos?.map((crypto) => {
-          return <CryptoCard id={crypto.uuid} crypto={crypto} />;
+          return <CryptoCard key={crypto.uuid} id={crypto.uuid} crypto={crypto} />;
         })}
       </div>
     </>

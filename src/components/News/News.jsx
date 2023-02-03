@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 import NewsCard from '../NewsCard/NewsCard';
 import { useGetCryptoNewsQuery } from '../../services/cryptoNewsApi';
@@ -22,16 +22,37 @@ const newsDemo = {
 };
 
 const News = ({ simplified }) => {
-  const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState('');
   // const count = simplified ? 6 : 30;
   // const { data, isFetching } = useGetCryptoNewsQuery({
   //   newsCategory: 'Cryptocurrency',
   //   count,
   // });
-  // const articles=data.articles
-  // if(isFetching)
-  // return "Loading..."
+  // const [articles, setArticles] = useState(data?.articles);
+
+  // console.log(articles);
+
+  // useEffect(() => {
+  //   console.log("haha");
+  //   if (!simplified) {
+  //     const filteredArticles = data?.articles.filter((article) =>
+  //       article.title.toLowerCase().includes(searchTerm.toLowerCase())
+  //     );
+  //     setArticles(filteredArticles);
+  //   } else {
+  //     setArticles(data?.articles);
+  //   }
+  // }, [data, searchTerm, simplified]);
+
   return (
+    // <div>
+    //   {!simplified && (
+    //     <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+    //   )}
+    //   {articles?.map((article) => {
+    //     return <NewsCard news={article} />;
+    //   })}
+    // </div>
     <div>
       {!simplified && (
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />

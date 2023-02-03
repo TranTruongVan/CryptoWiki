@@ -15,7 +15,7 @@ const App = () => {
       <Provider store={store}>
         <div className="flex flex-col md:flex-row relative">
           <NavBar />
-          <div className="flex-1 max-h-screen overflow-y-scroll pt-28 md:p-8 md:pt-8">
+          <div className="flex-1 max-h-screen overflow-y-auto pt-28 md:p-8 md:pt-8">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
