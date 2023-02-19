@@ -5,8 +5,7 @@ export const cryptoNewsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://newsapi.org/v2/everything' }),
   endpoints: (builder) => ({
     getCryptoNews: builder.query({
-      query: ({ newsCategory, count }) =>
-        `?q=${newsCategory}&apiKey=a1942ee9d8a646b5ae2f3a3fa6fd3f49&page=1&pageSize=${count}`,
+      query: ({ categoryNews, count }) => `?q=${categoryNews}&language=en&apiKey=a1942ee9d8a646b5ae2f3a3fa6fd3f49&page=1&pageSize=${count}`,
     }),
   }),
 });

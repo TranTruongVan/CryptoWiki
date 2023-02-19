@@ -5,17 +5,15 @@ export const cryptoApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://api.coingecko.com/api/v3' }),
   endpoints: (builder) => ({
     getCryptos: builder.query({
-      query: (count) =>
-        `/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${count}&page=1&sparkline=false`,
+      query: (count) => `/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${count}&page=1&sparkline=false`,
     }),
 
     getCryptoDetails: builder.query({
-      query: (coinId) => `/coins/${coinId}`,
+      query: (cryptoId) => `/coins/${cryptoId}`,
     }),
 
     getCryptoHistory: builder.query({
-      query: ({ coinId, timePeriod }) =>
-        `coins/${coinId}/market_chart?vs_currency=usd&days=${timePeriod}`,
+      query: ({ cryptoId, timePeriod }) => `coins/${cryptoId}/market_chart?vs_currency=usd&days=${timePeriod}`,
     }),
   }),
 });

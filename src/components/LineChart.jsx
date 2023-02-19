@@ -14,21 +14,30 @@ Chart.register(LinearScale);
 Chart.register(PointElement);
 Chart.register(LineElement);
 
-const LineChart = ({
+function LineChart({
   coinHistory,
   currentPrice,
   coinName,
   timePeriod,
   isFetchingChart,
-}) => {
+}) {
   return (
     <div className="md:p-8 p-4">
       <div className="flex justify-between items-center my-4">
         <div className="md:text-2xl font-bold text-blue-500">
-          {coinName} Price Chart{' '}
+          {coinName}
+          {' '}
+          Price Chart
+          {' '}
         </div>
         <div className="font-bold text-xs md:text-lg">
-          Current {coinName} Price: $ {currentPrice}
+          Current
+          {' '}
+          {coinName}
+          {' '}
+          Price: $
+          {' '}
+          {currentPrice}
         </div>
       </div>
       {isFetchingChart ? (
@@ -39,11 +48,10 @@ const LineChart = ({
         <Line
           data={{
             labels: coinHistory?.prices.map((coin) => {
-              let date = new Date(coin[0]);
-              let time =
-                date.getHours() > 12
-                  ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-                  : `${date.getHours()}:${date.getMinutes()} AM`;
+              const date = new Date(coin[0]);
+              const time = date.getHours() > 12
+                ? `${date.getHours() - 12}:${date.getMinutes()} PM`
+                : `${date.getHours()}:${date.getMinutes()} AM`;
               return Number(timePeriod) === 1
                 ? time
                 : date.toLocaleDateString();
@@ -69,6 +77,6 @@ const LineChart = ({
       )}
     </div>
   );
-};
+}
 
 export default LineChart;

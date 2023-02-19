@@ -7,16 +7,14 @@ export const cryptoGlobalApi = createApi({
   }),
   endpoints: (builder) => ({
     getCryptoGlobal: builder.query({
-      query: () => {
-        return {
-          url: `/coins?limit=1`,
-          headers: {
-            'X-RapidAPI-Key':
+      query: () => ({
+        url: '/coins?limit=1',
+        headers: {
+          'X-RapidAPI-Key':
               '88738c8398msh53c868ef94b6e17p1a9fe2jsn22543a9d5b32',
-            'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
-          },
-        };
-      },
+          'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
+        },
+      }),
     }),
   }),
 });

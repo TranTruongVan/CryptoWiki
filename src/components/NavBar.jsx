@@ -1,12 +1,16 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
-import logo from '../../assets/logo.png';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
-import NewspaperOutlinedIcon from '@mui/icons-material/NewspaperOutlined';
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
+import {
+  HomeOutlinedIcon,
+  MenuOutlinedIcon,
+  MonetizationOnOutlinedIcon,
+  NewspaperOutlinedIcon,
+} from '../constants/icons';
 
-const NavBar = () => {
+function NavBar() {
   const [openNav, setOpenNav] = useState(false);
   return (
     <div className="fixed md:static w-full md:w-auto">
@@ -73,6 +77,6 @@ const NavBar = () => {
       </div>
     </div>
   );
-};
+}
 
 export default NavBar;

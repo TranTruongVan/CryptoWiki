@@ -14,3 +14,24 @@
     @apply bg-slate-300;
   }
 }
+
+@layer components {
+  .header-info{
+    @apply mb-6
+  }
+  .header-info h3 {
+    @apply text-gray-500 text-lg;
+  }
+  .header-info p {
+    @apply text-3xl font-medium;
+  }
+  .desc a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3b82f6;
+  }
+  .desc a:hover {
+    color: #001529;
+  }
+  
+}
