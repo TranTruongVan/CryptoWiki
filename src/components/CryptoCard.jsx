@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function CryptoCard({ crypto }) {
   return (
-    <div className="w-72 mx-auto bg-white rounded-md mb-3 hover:shadow-xl">
+    <div className="min-w-[284px] max-w-[320px] m-1 bg-white rounded-md hover:shadow-xl mx-auto lg:mx-1">
       <Link to={`/crypto/${crypto.id}`}>
         <div className="flex items-center justify-between border-b p-3 border-b-gray-200">
           <div className="font-medium text-lg">

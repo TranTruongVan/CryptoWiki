@@ -32,7 +32,7 @@ function Cryptocurrencies({ simplified }) {
       {!simplified && (
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       )}
-      <div className="flex flex-wrap justify-between mt-6">
+      <div className="flex flex-wrap justify-start mt-6">
         {cryptos?.map((crypto) => (
           <CryptoCard key={crypto.uuid} id={crypto.uuid} crypto={crypto} />
         ))}

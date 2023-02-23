@@ -36,7 +36,7 @@ function News({ simplified }) {
           <CircularProgress size="120px" />
         </div>
       ) : (
-        <div className="flex flex-wrap justify-center w-full mt-4">
+        <div className="flex flex-wrap justify-start mt-4">
           {data?.articles?.map((article) => (
             <NewsCard key={article.id} news={article} />
           ))}
