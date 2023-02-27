@@ -14,7 +14,7 @@ function App() {
       <Provider store={store}>
         <div className="flex flex-col md:flex-row relative">
           <NavBar />
-          <div className="flex-1 max-h-screen overflow-y-auto pt-28 md:p-8 md:pt-8 bg-slate-200">
+          <div className="flex-1 max-h-screen overflow-y-auto pt-28 p-3 md:p-8 md:pt-8 bg-slate-200">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
